@@ -13,7 +13,7 @@
       --bg2: #fcb69f;
       --accent: #ff6b6b;
       --accent2: #ffd166;
-      --card-radius: 18px;
+      --card-radius: 16px;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -29,19 +29,18 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 8px;
+      padding: 10px;
     }
 
     .stage {
       width: 100%;
-      max-width: 560px; /* ลดจาก 600px → พอดีจอมือถือแน่นอน */
-      background: rgba(255,255,255,0.8);
+      max-width: 500px;
+      background: rgba(255,255,255,0.85);
       border-radius: 18px;
-      padding: 18px;
-      box-shadow: 0 6px 24px rgba(0,0,0,0.15);
-      position: relative;
-      overflow: hidden;
-      backdrop-filter: blur(10px);
+      padding: 16px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+      backdrop-filter: blur(8px);
+      text-align: center;
       animation: fadeIn 0.8s ease;
     }
 
@@ -53,16 +52,13 @@
     h1 {
       font-size: clamp(22px, 5vw, 30px);
       color: var(--accent);
-      text-align: center;
-      margin-bottom: 6px;
-      line-height: 1.2;
+      margin-bottom: 8px;
     }
 
     .subtitle {
       color: #6b4a4a;
       font-weight: 500;
-      text-align: center;
-      font-size: clamp(14px, 3vw, 17px);
+      font-size: clamp(14px, 3vw, 16px);
       margin-bottom: 12px;
     }
 
@@ -70,25 +66,23 @@
       background: rgba(255,255,255,0.9);
       border-radius: var(--card-radius);
       padding: 14px;
-      box-shadow: 0 4px 14px rgba(0,0,0,0.08);
-      margin-top: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      margin-top: 6px;
     }
 
     .typewriter {
       font-size: clamp(15px, 3vw, 17px);
-      margin-top: 10px;
       min-height: 56px;
-      line-height: 1.5;
       color: #4a3a3a;
-      text-align: center;
-      word-wrap: break-word;
       white-space: pre-wrap;
+      word-wrap: break-word;
+      line-height: 1.6;
     }
 
     .btns {
       display: flex;
       gap: 8px;
-      margin-top: 14px;
+      margin-top: 12px;
       justify-content: center;
       flex-wrap: wrap;
     }
@@ -111,22 +105,20 @@
     .gift-card {
       background: rgba(255,255,255,0.95);
       border-radius: 16px;
-      text-align: center;
-      margin-top: 16px;
+      margin-top: 14px;
       padding: 12px;
       box-shadow: 0 4px 14px rgba(0,0,0,0.1);
     }
 
     .gift-card img {
       width: 100%;
-      max-width: 240px;
+      max-width: 200px;
       border-radius: 12px;
       object-fit: contain;
     }
 
     .heart-wrap {
-      text-align: center;
-      margin-top: 12px;
+      margin-top: 10px;
       font-weight: 700;
       color: #6b3a3a;
     }
@@ -134,10 +126,9 @@
     .balloon {
       position: absolute;
       bottom: -160px;
-      width: 60px;
-      height: 90px;
+      width: 50px;
+      height: 80px;
       border-radius: 60% 60% 45% 45%;
-      transform-origin: center bottom;
       opacity: 0.9;
     }
 
@@ -152,9 +143,9 @@
       background: rgba(0,0,0,0.08);
     }
 
-    .b1 { background: radial-gradient(circle at 30% 30%, #fff8f8, #ff9aa2); left: 10%; animation: floatUp 10s linear infinite; }
-    .b2 { background: radial-gradient(circle at 30% 30%, #fff8f8, #ffb3c1); left: 45%; animation: floatUp 11s linear infinite; }
-    .b3 { background: radial-gradient(circle at 30% 30%, #fffef8, #ffd6a5); left: 80%; animation: floatUp 12s linear infinite; }
+    .b1 { background: radial-gradient(circle at 30% 30%, #fff8f8, #ff9aa2); left: 15%; animation: floatUp 10s linear infinite; }
+    .b2 { background: radial-gradient(circle at 30% 30%, #fffef8, #ffd6a5); left: 45%; animation: floatUp 12s linear infinite; }
+    .b3 { background: radial-gradient(circle at 30% 30%, #f8f8ff, #a29bfe); left: 75%; animation: floatUp 11s linear infinite; }
 
     @keyframes floatUp {
       0% { transform: translateY(0) rotate(-6deg); }
@@ -169,10 +160,9 @@
     }
 
     @media (max-width: 480px) {
-      body { padding: 6px; }
-      .stage { padding: 14px; border-radius: 16px; }
+      .stage { padding: 14px; border-radius: 16px; max-width: 94vw; }
       .card, .gift-card { padding: 10px; }
-      .gift-card img { max-width: 200px; }
+      .gift-card img { max-width: 160px; }
     }
   </style>
 </head>
@@ -192,7 +182,7 @@
 
     <div class="gift-card">
       <div style="font-weight:700;margin-bottom:8px">ของขวัญเล็ก ๆ 🎁</div>
-      <div style="font-size:14px;color:#4a3a3a;margin-bottom:10px;">แตะ “ส่งกำลังใจ” เพื่อเติมกำลังใจ!! </div>
+      <div style="font-size:14px;color:#4a3a3a;margin-bottom:10px;">แตะ “ส่งกำลังใจ” เพื่อเติมกำลังใจ!!</div>
       <img src="HBD/เจ้าอ้วน.png" alt="gift">
     </div>
 
@@ -256,7 +246,7 @@
     loveBtn.addEventListener('click', () => {
       sound.currentTime = 0;
       sound.play();
-      createFallingHearts(40);
+      createFallingHearts(35);
     });
 
     function createFallingHearts(count = 30) {
@@ -267,15 +257,15 @@
         heart.className = 'fall-heart';
         heart.style.top = '-40px';
         heart.style.left = Math.random() * window.innerWidth + 'px';
-        heart.style.fontSize = 14 + Math.random() * 20 + 'px';
+        heart.style.fontSize = 14 + Math.random() * 18 + 'px';
         heart.style.color = colors[Math.floor(Math.random() * colors.length)];
         document.body.appendChild(heart);
 
         heart.animate([
           { transform: `translateY(0)`, opacity: 1 },
-          { transform: `translateY(${window.innerHeight + 80}px)`, opacity: 0 }
+          { transform: `translateY(${window.innerHeight + 60}px)`, opacity: 0 }
         ], {
-          duration: 4500 + Math.random() * 3000,
+          duration: 5000 + Math.random() * 2000,
           easing: 'ease-in'
         }).onfinish = () => heart.remove();
       }
