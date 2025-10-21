@@ -2,7 +2,7 @@
 <html lang="th">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <title>Happy Birthday NaKub</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&family=Kanit:wght@300;600&display=swap" rel="stylesheet">
@@ -13,28 +13,28 @@
       --bg2: #fcb69f;
       --accent: #ff6b6b;
       --accent2: #ffd166;
-      --glass: rgba(255,255,255,0.6);
       --card-radius: 18px;
     }
 
     * { box-sizing: border-box; }
-    html, body { height: 100%; margin: 0; }
+    html, body { height: 100%; margin: 0; padding: 0; }
     body {
       font-family: 'Kanit', 'Comfortaa', system-ui, sans-serif;
       background: linear-gradient(135deg, var(--bg1), var(--bg2));
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 16px;
+      padding: 12px;
+      overflow-x: hidden;
     }
 
     .stage {
       width: 100%;
-      max-width: 900px;
-      background: rgba(255,255,255,0.7);
+      max-width: 600px;
+      background: rgba(255,255,255,0.8);
       border-radius: 20px;
-      padding: 24px;
-      box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+      padding: 18px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
       position: relative;
       overflow: hidden;
       backdrop-filter: blur(8px);
@@ -48,49 +48,38 @@
 
     .top-row {
       display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      align-items: flex-start;
-      justify-content: center;
-    }
-
-    .left {
-      flex: 1;
-      min-width: 280px;
-    }
-
-    .right {
-      width: 300px;
-      min-width: 250px;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
     }
 
     h1 {
       margin: 0;
-      font-size: clamp(26px, 5vw, 38px);
+      font-size: clamp(24px, 5vw, 36px);
       color: var(--accent);
-      letter-spacing: 1px;
       text-align: center;
     }
 
     .subtitle {
-      margin-top: 8px;
+      margin-top: 6px;
       color: #6b4a4a;
       font-weight: 500;
       text-align: center;
-      font-size: clamp(16px, 3vw, 20px);
+      font-size: clamp(15px, 3vw, 18px);
     }
 
     .card {
-      background: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(255,255,255,0.8));
+      background: rgba(255,255,255,0.9);
       border-radius: var(--card-radius);
-      padding: 16px;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+      padding: 14px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+      width: 100%;
     }
 
     .typewriter {
-      font-size: clamp(16px, 3vw, 20px);
-      margin-top: 14px;
-      min-height: 64px;
+      font-size: clamp(15px, 3vw, 18px);
+      margin-top: 10px;
+      min-height: 60px;
       line-height: 1.4;
       color: #4a3a3a;
       white-space: pre-wrap;
@@ -106,7 +95,7 @@
     }
 
     .btn {
-      padding: 10px 14px;
+      padding: 10px 16px;
       border-radius: 12px;
       border: none;
       cursor: pointer;
@@ -126,18 +115,18 @@
     }
 
     .heart-wrap {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      margin-top: 14px;
+      text-align: center;
+      margin-top: 10px;
+      font-weight: 700;
+      color: #6b3a3a;
     }
 
+    /* ลูกโป่ง */
     .balloon {
       position: absolute;
-      bottom: -160px;
-      width: 70px;
-      height: 100px;
+      bottom: -120px;
+      width: 60px;
+      height: 90px;
       border-radius: 60% 60% 45% 45%;
       transform-origin: center bottom;
       opacity: 0.9;
@@ -154,27 +143,30 @@
       background: rgba(0,0,0,0.08);
     }
 
-    .b1 { background: radial-gradient(circle at 30% 30%, #fff8f8, #ff9aa2); left: 12%; animation: floatUp 10s linear infinite; }
-    .b2 { background: radial-gradient(circle at 30% 30%, #fff8f8, #ffb3c1); left: 30%; animation: floatUp 11s linear infinite; }
-    .b3 { background: radial-gradient(circle at 30% 30%, #fffef8, #ffd6a5); left: 55%; animation: floatUp 12s linear infinite; }
-    .b4 { background: radial-gradient(circle at 30% 30%, #fffef8, #cde7ff); left: 75%; animation: floatUp 14s linear infinite; }
+    .b1 { background: radial-gradient(circle at 30% 30%, #fff8f8, #ff9aa2); left: 10%; animation: floatUp 10s linear infinite; }
+    .b2 { background: radial-gradient(circle at 30% 30%, #fff8f8, #ffb3c1); left: 35%; animation: floatUp 12s linear infinite; }
+    .b3 { background: radial-gradient(circle at 30% 30%, #fffef8, #ffd6a5); left: 60%; animation: floatUp 14s linear infinite; }
+    .b4 { background: radial-gradient(circle at 30% 30%, #fffef8, #cde7ff); left: 80%; animation: floatUp 16s linear infinite; }
 
     @keyframes floatUp {
       0% { transform: translateY(0) rotate(-6deg); }
-      50% { transform: translateY(-18vh) rotate(6deg); }
-      100% { transform: translateY(-38vh) rotate(-6deg); }
+      50% { transform: translateY(-20vh) rotate(6deg); }
+      100% { transform: translateY(-40vh) rotate(-6deg); }
     }
 
-    .firework, .fall-heart, .confetti-piece {
+    .fall-heart {
       position: fixed;
-      z-index: 9999;
+      top: -50px;
       pointer-events: none;
+      user-select: none;
+      z-index: 9999;
+      will-change: transform, opacity;
+      animation-timing-function: ease-in;
     }
 
-    @media (max-width: 600px) {
-      body { padding: 12px; }
-      .stage { padding: 18px; }
-      .right { width: 100%; }
+    @media (max-width: 480px) {
+      .stage { padding: 14px; }
+      .btn { font-size: 14px; padding: 8px 12px; }
     }
   </style>
 </head>
@@ -182,31 +174,25 @@
 <body>
   <div class="stage">
     <div class="top-row">
-      <div class="left">
-        <div class="card">
-          <h1>สุขสันต์วันเกิดนะ 🎂</h1>
-          <div class="subtitle">ขอให้มีความสุขมาก ๆ ในทุก ๆ วัน</div>
+      <div class="card">
+        <h1>สุขสันต์วันเกิดนะ 🎂</h1>
+        <div class="subtitle">ขอให้มีความสุขมาก ๆ ในทุก ๆ วัน</div>
 
-          <div class="typewriter" id="typewriter"></div>
+        <div class="typewriter" id="typewriter"></div>
 
-          <div class="btns">
-            <button class="btn play" id="revealBtn">เปิดการ์ด</button>
-            <button class="btn love" id="loveBtn">ส่งกำลังใจ 💖</button>
-          </div>
+        <div class="btns">
+          <button class="btn play" id="revealBtn">เปิดการ์ด</button>
+          <button class="btn love" id="loveBtn">ส่งกำลังใจ 💖</button>
         </div>
 
-        <div class="heart-wrap">
-          <div style="font-weight:700;color:#6b3a3a">สำหรับ: เจด้า</div>
-        </div>
+        <div class="heart-wrap">สำหรับ: เจด้า</div>
       </div>
 
-      <div class="right">
-        <div class="card" style="text-align:center">
-          <div style="font-weight:700;margin-bottom:8px">ของขวัญเล็ก ๆ 🎁</div>
-          <div style="font-size:14px;color:#4a3a3a">แตะ “ส่งกำลังใจ” เพื่อดูอนิเมชั่น</div>
-          <div style="margin-top:12px">
-            <img src="HBD/เจ้าอ้วน.png" alt="gift">
-          </div>
+      <div class="card" style="text-align:center">
+        <div style="font-weight:700;margin-bottom:8px">ของขวัญเล็ก ๆ 🎁</div>
+        <div style="font-size:14px;color:#4a3a3a">แตะ “ส่งกำลังใจ” เพื่อดูอนิเมชั่น</div>
+        <div style="margin-top:12px">
+          <img src="HBD/เจ้าอ้วน.png" alt="gift">
         </div>
       </div>
     </div>
@@ -216,16 +202,14 @@
     <div class="balloon b3"></div>
     <div class="balloon b4"></div>
 
-    <div id="confetti"></div>
-
     <audio id="bgm" loop><source src="HBD/ท็อปในรุ่น.mp3" type="audio/mpeg"></audio>
   </div>
 
   <script>
     const recipientName = 'เจด้า';
     const messages = [
-      `${recipientName},\n  เก่งที่สุดแล้ววอย่าตัดพ้อตัวเองนะ 💖`,
-      `ขออย่าให้มีฝนตกในและใจเป็นกำลังใจให้เสมอ✌`
+      `${recipientName},\n  เก่งที่สุดแล้วว อย่าตัดพ้อตัวเองนะ 💖`,
+      `ขออย่าให้มีฝนตกในใจ เป็นกำลังใจให้เสมอ ✨`
     ];
 
     document.querySelector('h1').textContent = `สุขสันต์วันเกิดนะ ${recipientName} 🎉`;
@@ -241,7 +225,7 @@
         i++;
         if (i > fullText.length) {
           clearInterval(t);
-          setTimeout(done, 800);
+          setTimeout(done, 1000);
         }
       }, 40);
     }
@@ -249,7 +233,7 @@
     function loopMessages() {
       typeMessage(messages[msgIndex], () => {
         msgIndex = (msgIndex + 1) % messages.length;
-        setTimeout(loopMessages, 1000);
+        setTimeout(loopMessages, 800);
       });
     }
 
@@ -267,7 +251,7 @@
     loveBtn.addEventListener('click', () => {
       sound.currentTime = 0;
       sound.play();
-      createFallingHearts(40);
+      createFallingHearts(45);
     });
 
     function createFallingHearts(count = 30) {
@@ -275,20 +259,35 @@
       for (let i = 0; i < count; i++) {
         const heart = document.createElement('div');
         heart.textContent = '💖';
-        heart.style.position = 'fixed';
-        heart.style.top = '-40px';
-        heart.style.left = Math.random() * window.innerWidth + 'px';
-        heart.style.fontSize = 16 + Math.random() * 28 + 'px';
-        heart.style.color = colors[Math.floor(Math.random() * colors.length)];
+        heart.className = 'fall-heart';
         document.body.appendChild(heart);
 
-        heart.animate([
-          { transform: `translateY(0)`, opacity: 1 },
-          { transform: `translateY(${window.innerHeight + 100}px)`, opacity: 0 }
-        ], {
-          duration: 4000 + Math.random() * 3000,
-          easing: 'ease-in'
-        }).onfinish = () => heart.remove();
+        const startX = Math.random() * (window.innerWidth - 30);
+        const size = 18 + Math.random() * 26;
+        const duration = 5000 + Math.random() * 4000;
+        const delay = Math.random() * 600;
+        const rotate = Math.random() * 360;
+        const color = colors[Math.floor(Math.random() * colors.length)];
+
+        heart.style.left = startX + 'px';
+        heart.style.fontSize = size + 'px';
+        heart.style.color = color;
+        heart.style.transform = `rotate(${rotate}deg)`;
+
+        heart.animate(
+          [
+            { transform: `translateY(-60px) rotate(${rotate}deg)`, opacity: 1 },
+            {
+              transform: `translateY(${window.innerHeight + 100}px) rotate(${rotate + 180}deg)`,
+              opacity: 0,
+            },
+          ],
+          {
+            duration: duration,
+            delay: delay,
+            easing: 'ease-in',
+          }
+        ).onfinish = () => heart.remove();
       }
     }
   </script>
