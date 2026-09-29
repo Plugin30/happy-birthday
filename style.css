@@ -602,20 +602,24 @@ body.cake-dark .blow-cake-btn + p {
         0 0 5px rgba(255, 255, 255, 0.8),
 }
 
-.cake-area {
+.cake-row {
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     min-height: 430px;
 }
 
 .cake-img {
     width: 150px;
-    height: 250px;
+    height: 150px;
     object-fit: contain;
+
     position: absolute;
     z-index: 10;
 
-    top: 300px; /* เลื่อนเค้กลง */
+    top: 20px;
     left: 50%;
     transform: translateX(-50%);
 
@@ -643,10 +647,12 @@ body.cake-dark .blow-cake-btn + p {
 
 @media (max-width: 480px) {
     .cake-img.cake-moved {
-        width: 55px;
-        height: 55px;
+        width: 80px;
+        height: 80px;
+
         top: 50%;
-        left: calc(50% + 125px);
+        left: calc(50% + 100px);
+
         transform: translate(-50%, -50%);
     }
 }
