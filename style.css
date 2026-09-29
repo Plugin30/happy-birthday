@@ -29,7 +29,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 8px;
+  padding: 2px;
 }
 
 /* Main container */
@@ -61,10 +61,10 @@ body {
 
 /* Heading */
 h1 {
-  font-size: clamp(22px, 5vw, 30px);
+  font-size: clamp(30px, 5vw, 30px);
   color: var(--accent);
   text-align: center;
-  margin-bottom: 6px;
+  margin-bottom: 12px;
   line-height: 1.2;
 }
 
@@ -81,17 +81,16 @@ h1 {
 .card {
   background: rgba(255, 255, 255, 0.9);
   border-radius: var(--card-radius);
-  padding: 14px;
   box-shadow:
     0 4px 14px rgba(0, 0, 0, 0.08);
-  margin-top: 8px;
+  margin-top: 10px;
 }
 
 /* Typewriter */
 .typewriter {
   font-size: clamp(15px, 3vw, 17px);
-  margin-top: 10px;
-  min-height: 56px;
+  padding-top: 12px;
+  min-height: 55px;
   line-height: 1.5;
   color: #4a3a3a;
   text-align: center;
@@ -103,14 +102,13 @@ h1 {
 .btns {
   display: flex;
   gap: 8px;
-  margin-top: 14px;
   justify-content: center;
   flex-wrap: wrap;
 }
 
 /* Buttons */
 .btn {
-  padding: 9px 14px;
+  padding: 8px 14px;
   border-radius: 12px;
   border: none;
   cursor: pointer;
@@ -143,29 +141,21 @@ h1 {
   background: rgba(255, 255, 255, 0.95);
   border-radius: 16px;
   text-align: center;
-  margin-top: 16px;
-  padding: 12px;
-  box-shadow:
-    0 4px 14px rgba(0, 0, 0, 0.1);
+  margin-top: 6px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
 }
 
 .gift-title {
   font-weight: 700;
   font-size: 20px;
   margin-bottom: 8px;
+  padding-top: 20px;
 }
 
 .gift-description {
   font-size: 14px;
   color: #4a3a3a;
   margin-bottom: 10px;
-}
-
-.gift-card img {
-  width: 100%;
-  max-width: 240px;
-  border-radius: 12px;
-  object-fit: contain;
 }
 
 /* Balloons */
@@ -242,28 +232,6 @@ h1 {
   position: fixed;
   z-index: 9999;
   pointer-events: none;
-}
-
-/* Mobile */
-@media (max-width: 480px) {
-  body {
-    padding: 6px;
-  }
-  .stage {
-    padding: 14px;
-    border-radius: 16px;
-  }
-  .card,
-  .gift-card {
-    padding: 10px;
-  }
-  .gift-card img {
-    max-width: 200px;
-  }
-  .btn {
-    font-size: 14px;
-    padding: 9px 12px;
-  }
 }
 
 /* ========================================
@@ -462,25 +430,6 @@ h1 {
   }
 }
 
-/* มือถือ */
-
-@media (max-width: 480px) {
-  .birthday-box {
-    padding:
-      26px 18px;
-    border-radius: 20px;
-  }
-  .birthday-inputs {
-    gap: 6px;
-  }
-  .birthday-inputs input {
-    padding:
-      12px 5px;
-    font-size: 15px;
-
-  }
-
-}
 /* ========================================
    สไลด์รูปภาพ
    ======================================== */
@@ -504,7 +453,7 @@ h1 {
 
 .photo-track img,
 .photo-track video {
-    width: 100%;
+    width: 200%;
     min-width: 100%;
     flex:0 0 100%;
     height: 300px;
@@ -537,23 +486,6 @@ h1 {
     background: var(--accent);
 }
 
-/* มือถือ */
-@media (max-width: 480px) {
-    .photo-track img,
-    .photo-track video {
-       height: 260px;
-    }
-}
-
-.cake-row {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: nowrap;
-    gap: 2px;
-    width: 100%;
-}
-
 .cake-img {
     width: 90px;
     height: 90px;
@@ -563,23 +495,25 @@ h1 {
 
 /* ทำให้รูปตรงกลางไม่กินพื้นที่ทั้งหมด */
 .cake-row .photo-slider {
-    width: 240px;
+    width: 300px;
     max-width: 240px;
-    flex: 0 0 240px;
+    flex-basis: 240px;
     margin: 0;
+    transform: translateY(-50px);
 }
 
 /* ปุ่มเป่าให้อยู่ตรงกลางใต้รูป */
 .blow-cake-btn {
     display: block;
-    margin: 12px auto 0;
-    padding: 9px 18px;
+    margin: 20px auto 0;
+    padding: 12px 25px;
     border: none;
     border-radius: 20px;
     background: #ff8fab;
     color: white;
     font-size: 14px;
     cursor: pointer;
+    margin-top: -75px;
 }
 
 
@@ -608,18 +542,18 @@ body.cake-dark .blow-cake-btn + p {
     align-items: center;
     justify-content: center;
     width: 100%;
-    min-height: 430px;
+    min-height: 400px;
 }
 
 .cake-img {
-    width: 150px;
-    height: 150px;
+    width: 300px;
+    height: 300px;
     object-fit: contain;
 
     position: absolute;
     z-index: 10;
 
-    top: 20px;
+    top: -80px;
     left: 50%;
     transform: translateX(-50%);
 
@@ -639,22 +573,10 @@ body.cake-dark .blow-cake-btn + p {
     width: 120px;
     height: 120px;
 
-    top: 80%;
-    left: calc(50% + 180px);
+    top: 65%;
+    left: calc(50% + 150px);
 
     transform: translate(-50%, -50%);
-}
-
-@media (max-width: 480px) {
-    .cake-img.cake-moved {
-        width: 80px;
-        height: 80px;
-
-        top: 50%;
-        left: calc(50% + 100px);
-
-        transform: translate(-50%, -50%);
-    }
 }
 
 /* ========================================
@@ -698,3 +620,4 @@ body.cake-dark .blow-cake-btn {
 body.cake-dark .blow-cake-btn + p {
     filter: brightness(1);
 }
+
