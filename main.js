@@ -481,11 +481,8 @@ document.body.classList.add('cake-dark');
 const blowCakeBtn =
     document.getElementById('blowCakeBtn');
 
-const cakeLeft =
-    document.getElementById('cakeLeft');
-
-const cakeRight =
-    document.getElementById('cakeRight');
+const cake =
+    document.getElementById('cake');
 
 const blowSound = new Audio('blow-candle.mp3');
 blowSound.volume = 1.0;
@@ -495,8 +492,11 @@ blowCakeBtn.addEventListener('click', () => {
     blowSound.currentTime = 0;
     blowSound.play();
 
-    cakeLeft.src = 'photo/cake-off.png';
-    cakeRight.src = 'photo/cake-off.png';
+    cake.src = 'photo/cake-off.png';
+
+    setTimeout(() => {
+        cake.classList.add('cake-moved');
+    }, 300);
 
     blowCakeBtn.disabled = true;
     blowCakeBtn.textContent = 'เป่าแล้ว 💨';
