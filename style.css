@@ -642,20 +642,12 @@ body.cake-dark .blow-cake-btn + p {
 }
 
 @media (max-width: 480px) {
-
-    .cake-row {
-        gap: 0;
-    }
-
-    .cake-img {
-        width: 42px;
-        height: 42px;
-    }
-
-    .cake-row .photo-slider {
-        width: 220px;
-        max-width: 220px;
-        flex-basis: 220px;
+    .cake-img.cake-moved {
+        width: 55px;
+        height: 55px;
+        top: 50%;
+        left: calc(50% + 125px);
+        transform: translate(-50%, -50%);
     }
 }
 
