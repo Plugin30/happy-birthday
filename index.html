@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday🎂</title>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&family=Kanit:wght@300;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+<body> 
+    <div class="birthday-screen" id="birthdayScreen" > 
+        <div class="birthday-box"> 
+            <div class="birthday-icon"> 🎁 </div> 
+            <h1> เดี๋ยวก่อน! 👀 </h1> 
+            <p class="birthday-subtitle"> ก่อนจะเข้าไปข้างใน
+                <br> ขอพิสูจน์ก่อนว่าเธอคือเจด้าจริงๆรึป่าว? 
+            </p> <!-- ช่องกรอกวันเกิด --> <div class="birthday-inputs"> 
+                <input type="number" id="birthDay" placeholder="วัน" min="1" max="31" > 
+                <input type="number" id="birthMonth" placeholder="เดือน" min="1" max="12" > 
+                <input type="number" id="birthYear" placeholder="ปี" min="1900" max="2100" > 
+            </div> 
+            <button class="birthday-btn" id="birthdayBtn" > ตรวจสอบ 🎂 </button> 
+            <!-- ข้อความแจ้งเตือน --> 
+             <div class="birthday-message" id="birthdayMessage" ></div> 
+            </div>  
+        </div>
+    <div class="stage" id="mainStage">
+        <h1>สุขสันต์วันเกิดนะ เจด้าาา 🎂</h1> 
+
+    <div class="card"> 
+        <div class="typewriter" id="typewriter"></div> 
+        <div class="btns"> 
+            <button class="btn play" id="revealBtn"> สิ่งที่อยากบอก </button> 
+            <button class="btn love" id="loveBtn"> ส่งกำลังใจ 💖 </button> 
+        </div> 
+    </div> 
+
+    <div class="gift-card"> 
+        <div class="gift-title"> รอยยิ้มที่สดใส📸 </div> 
+        <div class="gift-description"> แตะ “ส่งกำลังใจ” เพื่อเติมกำลังใจในวันที่รู้สึกแย่ </div> 
+        <div class="gift-description"> ปัดรูปเพื่อดูรอยยิ้มที่สดใสของเจด้า!! </div>
+        <div class="gift-description"> ↓ </div>
+        <div class="cake-row">
+            <img id="cake" src="photo/cake-on.png" class="cake-img">
+        
+            <div class="photo-slider" id="photoSlider">
+                <div class="photo-track" id="photoTrack">
+                    <img src="photo/smile1.jpg" alt="รูปที่ 1">
+                    <video src="photo/smile2.mp4" autoplay muted loop playsinline></video>
+                    <img src="photo/smile3.jpg" alt="รูปที่ 3">
+                    <img src="photo/smile4.jpg" alt="รูปที่ 4">
+                    <img src="photo/smile5.jpg" alt="รูปที่ 5">
+                    <img src="photo/smile6.jpg" alt="รูปที่ 6">
+                    <img src="photo/smile7.jpg" alt="รูปที่ 7">
+                </div>
+        </div>
+    </div>
+
+    <button id="blowCakeBtn" class="blow-cake-btn">
+            💨 เป่าเค้ก
+    </button>
+    <p> อธิฐานก่อนเป่าเค้ก❗ </p>
+
+<div class="photo-dots" id="photoDots"></div>
+        <!-- ลูกโป่ง --> 
+         <div class="balloon b1"></div> 
+         <div class="balloon b2"></div> 
+         <div class="balloon b3"></div> 
+         <!-- เพลง --> 
+          <audio id="bgm" loop> 
+            <source src="be-kind-to-you.mp3" type="audio/mpeg"> </audio> 
+        </div>
+
+    <script src="main.js"></script>
+
+</body>  
+</html>
